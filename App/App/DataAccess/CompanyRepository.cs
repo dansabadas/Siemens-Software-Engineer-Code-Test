@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 
 namespace App
 {
-    public class CompanyRepository
+    public class CompanyRepository : ICompanyRepository
     {
         public Company GetById(int id)
         {
@@ -42,5 +38,10 @@ namespace App
 
             return company;
         }
+    }
+
+    public interface ICompanyRepository
+    {
+        Company GetById(int id);
     }
 }

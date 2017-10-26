@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 
 namespace App
 {
-    public static class CustomerDataAccess
+    public class CustomerDataAccess : ICustomerDataAccess
     {
-        public static void AddCustomer(Customer customer)
+        public void AddCustomer(Customer customer)
         {
             var connectionString = ConfigurationManager.ConnectionStrings["appDatabase"].ConnectionString;
 
@@ -42,5 +38,10 @@ namespace App
                 command.ExecuteNonQuery();
             }
         }
+    }
+
+    public interface ICustomerDataAccess
+    {
+        void AddCustomer(Customer customer);
     }
 }

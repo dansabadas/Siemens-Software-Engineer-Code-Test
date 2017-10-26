@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classification.cs" />
-    <Compile Include="Company.cs" />
-    <Compile Include="CompanyRepository.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="CustomerCreditService.cs" />
-    <Compile Include="CustomerDataAccess.cs" />
+    <Compile Include="Validation\CustomerValidator.cs" />
+    <Compile Include="Validation\ICustomerValidator.cs" />
+    <Compile Include="Model\Classification.cs" />
+    <Compile Include="Model\Company.cs" />
+    <Compile Include="DataAccess\CompanyRepository.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="WebProxies\CreditLimitCalculator.cs" />
+    <Compile Include="WebProxies\CustomerCreditService.cs" />
+    <Compile Include="DataAccess\CustomerDataAccess.cs" />
     <Compile Include="CustomerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

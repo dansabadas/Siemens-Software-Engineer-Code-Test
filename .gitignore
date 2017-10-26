@@ -1,3 +1,6 @@
 *.suo
 App/App/bin/
 App/App/obj/
+App/App.Tests/bin/
+App/App.Tests/obj/
+App/packages/

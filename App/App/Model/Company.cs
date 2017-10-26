@@ -8,4 +8,10 @@ namespace App
 
         public Classification Classification { get; set; }
     }
+
+    public static class CompanyNames
+    {
+        public const string VeryImportantClient = "VeryImportantClient";
+        public const string ImportantClient = "ImportantClient";
+    }
 }
